@@ -1,21 +1,30 @@
 import "../css/main.css";
 import PropTypes from "prop-types";
 
-export default function UploadComp({uploadFunc}) {
+export default function UploadComp({ uploadFunc }) {
   return (
     <>
-      <div className="upload-wrapper">
-        <button className="upload">Upload file</button>
+      <form className="upload-wrapper">
         <input
+          className="upload-input"
           type="file"
+          id="image_uploads"
+          name="image_uploads"
+          accept=".jpg, .jpeg, .png"
           // onInput={handleSelect}
-          onInput={async(evt) => {
+          onInput={async (evt) => {
             const files = [...evt.target.files];
             const urls = await Promise.all(files.map((o) => fileToDataUrl(o)));
             uploadFunc(urls);
           }}
-          />
-      </div>
+        />
+        <label
+          className="upload-label"
+          htmlFor="image_uploads"
+        >
+          Upload file
+        </label>
+      </form>
     </>
   );
 }
