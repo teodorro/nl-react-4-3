@@ -19,13 +19,17 @@ export default function PhotosComp() {
     setImages([...imagesRef.current]);
   };
   const [images, setImages] = useState([]);
+  const removeItem = (id) => {
+    imagesRef.current = imagesRef.current.filter((item) => item.id !== id);
+    setImages([...imagesRef.current]);
+  }
   return (
     <div className="photos-component">
       <div className="upload-component">
         <UploadComp uploadFunc={upload} />
       </div>
       <div className="photos-list-component">
-        <PhotosList images={images} />
+        <PhotosList images={images} removeItem={removeItem}/>
       </div>
     </div>
   );

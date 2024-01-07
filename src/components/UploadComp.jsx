@@ -10,6 +10,7 @@ export default function UploadComp({ uploadFunc }) {
           type="file"
           id="image_uploads"
           name="image_uploads"
+          multiple
           accept=".jpg, .jpeg, .png"
           onInput={async (evt) => {
             const files = [...evt.target.files];
@@ -21,7 +22,7 @@ export default function UploadComp({ uploadFunc }) {
           className="upload-label"
           htmlFor="image_uploads"
         >
-          Upload file
+          Click to select
         </label>
       </form>
     </>
@@ -43,13 +44,6 @@ const fileToDataUrl = (file) => {
     fileReader.readAsDataURL(file);
   });
 };
-
-// const handleSelect = async (evt) => {
-//   const files = [...evt.target.files];
-//   const urls = await Promise.all(files.map((o) => fileToDataUrl(o)));
-//   console.log(urls)
-//   // У вас в массиве - dataUrl, можете использовать в качестве значения атрибута src тега img
-// };
 
 UploadComp.propTypes = {
   uploadFunc: PropTypes.func,
