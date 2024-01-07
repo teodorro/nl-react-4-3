@@ -1,0 +1,63 @@
+.photos-component {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #f00;
+}
+
+.upload-component {
+  background-color: whitesmoke;
+  border: 1px solid #000;
+  border-radius: 1.5em;
+  margin: 2em;
+  padding: 2em;
+  min-height: 200px;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.photos-list-component {
+  border: 1px solid #000;
+  background:whitesmoke;
+  margin: 2em;
+  padding: 0.5em;
+  min-height: 150px;
+  min-width: 200px;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.upload-wrapper {
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0 auto;
+  border: 1px solid #00f;
+}
+.upload {
+  place-items: center;
+  text-align: center;
+  border: 1px solid #000;
+  background-color: oldlace;
+  color: #000;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.photos-list {
+  background: whitesmoke;
+}
+.item {
+  width: 110px;
+  height: 110px;
+  /* border: 1px solid #000; */
+  background: whitesmoke;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0em 0.2em 0.5em 0.2em gainsboro;
+  margin: 0.5em;
+}
+.item-img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+}
