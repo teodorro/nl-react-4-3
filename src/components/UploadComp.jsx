@@ -11,7 +11,6 @@ export default function UploadComp({ uploadFunc }) {
           id="image_uploads"
           name="image_uploads"
           accept=".jpg, .jpeg, .png"
-          // onInput={handleSelect}
           onInput={async (evt) => {
             const files = [...evt.target.files];
             const urls = await Promise.all(files.map((o) => fileToDataUrl(o)));

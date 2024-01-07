@@ -19,7 +19,6 @@ export default function PhotosComp() {
     setImages([...imagesRef.current]);
   };
   const [images, setImages] = useState([]);
-  // const getImages = () => imagesRef.current;
   return (
     <div className="photos-component">
       <div className="upload-component">
